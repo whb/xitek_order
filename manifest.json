@@ -1,0 +1,24 @@
+{
+  "name": "Xitek reorder",
+  "version": "1.0",
+  "description": "Reorder posts to asc in xitek forum.",
+  "background_page": "background.html",
+  "page_action" :
+  {
+    "default_icon" : "icon16.png",
+    "default_title" : "Replace xitek order url"
+  },
+  "permissions" : [
+    "tabs"
+  ],
+  "icons" : {
+    "48" : "icon48.png",
+    "128" : "icon128.png"
+  },
+	"content_scripts": [
+    {
+      "matches": ["http://forum.xitek.com/forumdisplay.php?*"],
+      "js" : ["url_replace.js"]
+    }
+  ]
+}
